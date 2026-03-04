@@ -1,0 +1,5 @@
+SpaceInvader/Debug/
+SpaceInvader/.settings/
+SpaceInvader/*.launch
+SpaceInvader/*.bak
+.metadata
