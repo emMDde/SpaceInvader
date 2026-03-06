@@ -1,0 +1,13 @@
+#ifndef INC_ARROW_H_
+#define INC_ARROW_H_
+
+#include <stdint.h>
+
+#define BUTTON_ARROW_WIDTH  30
+#define BUTTON_ARROW_HEIGHT 30
+
+extern const uint32_t LEFT_ARROW_TEXTURE[BUTTON_ARROW_WIDTH * BUTTON_ARROW_HEIGHT];
+
+extern const uint32_t RIGHT_ARROW_TEXTURE[BUTTON_ARROW_WIDTH * BUTTON_ARROW_HEIGHT];
+
+#endif
