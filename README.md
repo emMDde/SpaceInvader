@@ -12,6 +12,8 @@ Implementation of the classic "Space Invaders" game, built from scratch for the 
 
 The diagram below illustrates the system architecture, including the communication between the microcontroller and peripheral devices:
 
+
+
 !\[System Architecture Diagram](doc/architektura.png)
 
 
@@ -20,13 +22,13 @@ The diagram below illustrates the system architecture, including the communicati
 
 
 
-\* Custom Graphics Engine: Direct frame buffer management and rendering optimization.
+\- Custom Graphics Engine: Direct frame buffer management and rendering optimization.
 
-\* Display Controller (LTDC): Custom library developed for TFT display handling.
+\- Display Controller (LTDC): Custom library developed for TFT display handling.
 
-\* Memory Management (FMC): FMC controller configuration to support external SDRAM.
+\- Memory Management (FMC): FMC controller configuration to support external SDRAM.
 
-\* Controls: Integration of touch panel and gyroscope controls via SPI/I2C communication.
+\- Controls: Integration of touch panel and gyroscope controls via SPI/I2C communication.
 
 
 
@@ -34,11 +36,11 @@ The diagram below illustrates the system architecture, including the communicati
 
 
 
-\* Evaluation Board: STM32F429I-DISC1 (STM32F429ZI ARM Cortex-M4)
+\- Evaluation Board: STM32F429I-DISC1 (STM32F429ZI ARM Cortex-M4)
 
-\* IDE: STM32CubeIDE
+\- IDE: STM32CubeIDE
 
-\* Language: C + C++
+\- Language: C + C++
 
 
 
@@ -48,5 +50,9 @@ The diagram below illustrates the system architecture, including the communicati
 
 Pin configuration and peripheral mapping:
 
+
+
 !\[MCUpinout](doc/mcu.png)
+
+
 

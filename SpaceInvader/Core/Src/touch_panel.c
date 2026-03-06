@@ -11,28 +11,28 @@ void initTouchPanel()
 {
 	TouchPanel_Write_Reg(0x03, 0x02); // Reset
 	HAL_Delay(10);
-	TouchPanel_Write_Reg(0x03, 0x00); // Wyjscie z resetu
-	TouchPanel_Write_Reg(0x04, 0x0C); // Wlaczenie zegarow dla TS i Temp
-	TouchPanel_Write_Reg(0x09, 0x00); // Wylaczenie przerwan
-	TouchPanel_Write_Reg(0x0A, 0x02); // Wlaczenie przerwania od danych dotyku
-	TouchPanel_Write_Reg(0x40, 0x03); // Wlaczenie sensora dotyku
-	TouchPanel_Write_Reg(0x41, 0x9B); // Ustawienia specyfikacji odczytu //A3
-	TouchPanel_Write_Reg(0x4A, 0x01); // Ilesc dotykow w buforze przy przerwaniu - 1
-	TouchPanel_Write_Reg(0x58, 0x01); // Ustawienia prądu
+	TouchPanel_Write_Reg(0x03, 0x00); // Out of reset mode
+	TouchPanel_Write_Reg(0x04, 0x0C); // Clock for Touch Screen and temperature sensor
+	TouchPanel_Write_Reg(0x09, 0x00); // Interrupt system disabled
+	TouchPanel_Write_Reg(0x0A, 0x02); // Touch interrupt off
+	TouchPanel_Write_Reg(0x40, 0x03); // Touch sensor on
+	TouchPanel_Write_Reg(0x41, 0x9B); // Touch specification
+	TouchPanel_Write_Reg(0x4A, 0x01); // Data count in interrupt FIFO - 1
+	TouchPanel_Write_Reg(0x58, 0x01); // Current settings
 }
 
 void enableTouchIT()
 {
 	TouchPanel_Write_Reg(0x4B, 0x01); // Reset FIFO
 	HAL_Delay(5);
-	TouchPanel_Write_Reg(0x0B, 0xFF); // Wyczyszczenie przerwań
-	TouchPanel_Write_Reg(0x4B, 0x00); // Wlaczenie FIFO
-	TouchPanel_Write_Reg(0x09, 0x01); // Wlaczenie przerwan
+	TouchPanel_Write_Reg(0x0B, 0xFF); // Clear interrupt system
+	TouchPanel_Write_Reg(0x4B, 0x00); // FIFO on
+	TouchPanel_Write_Reg(0x09, 0x01); // Interrupt system on
 }
 
 void disableTouchIT(void)
 {
-	TouchPanel_Write_Reg(0x09, 0x00); // Wylaczenie przerwan
+	TouchPanel_Write_Reg(0x09, 0x00); // Interrupt system off
 	touchX=0;
 	touchY=0;
 }
@@ -40,8 +40,8 @@ void disableTouchIT(void)
 void clearTouchIT(void)
 {
 	TouchPanel_Write_Reg(0x4B, 0x01); // Reset FIFO
-	TouchPanel_Write_Reg(0x0B, 0xFF); // Wyczyszczenie przerwań
-	TouchPanel_Write_Reg(0x4B, 0x00); // Wlaczenie FIFO
+	TouchPanel_Write_Reg(0x0B, 0xFF); // Clear interrupt system
+	TouchPanel_Write_Reg(0x4B, 0x00); // FIFO on
 }
 
 void readTouchData(void)
