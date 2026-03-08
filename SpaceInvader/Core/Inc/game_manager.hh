@@ -1,5 +1,5 @@
-#ifndef INC_GAME_MENAGER_HH_
-#define INC_GAME_MENAGER_HH_
+#ifndef INC_GAME_MANAGER_HH_
+#define INC_GAME_MANAGER_HH_
 
 #include <S_Inv.hh>
 extern "C"{
@@ -26,4 +26,4 @@ void operateMenu(void);
 void operateGame(void);
 void operateEndMenu(void);
 
-#endif /* INC_GAME_MENAGER_HH_ */
+#endif /* INC_GAME_MANAGER_HH_ */

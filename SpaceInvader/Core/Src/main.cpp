@@ -17,7 +17,7 @@
   */
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
-#include <game_menager.hh>
+#include <game_manager.hh>
 extern "C"{
 #include "main.h"
 /* Private includes ----------------------------------------------------------*/

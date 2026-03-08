@@ -1,4 +1,4 @@
-#include <game_menager.hh>
+#include <game_manager.hh>
 
 static uint32_t last_tick=0;
 
