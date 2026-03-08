@@ -14,7 +14,7 @@ The diagram below illustrates the system architecture, including the communicati
 
 
 
-\[System Architecture Diagram](doc/architektura.png)
+![System Architecture Diagram](doc/architektura.png)
 
 
 
@@ -52,7 +52,7 @@ Pin configuration and peripheral mapping:
 
 
 
-\[MCUpinout](doc/mcu.png)
+![MCUpinout](doc/mcu.png)
 
 
 
